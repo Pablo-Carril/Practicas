@@ -1,0 +1,58 @@
+body {     
+    font-size: 26px;
+    font-family: sans-serif;
+    --color-de-letra: rgb(0, 0, 0);  /* creamos una variable. puede ser aquí o en :root para toda la página */
+}
+
+body { background: rgb(245, 216, 183);}
+
+.resaltado { border: 4px solid red; }
+
+.contenedor { 
+    color: rgb(127,127,127);
+    background-color: rgba(255,0,255,0.2);       /* rgba(255,0,255,0.2);  /* sólo quiero ver el div. luego sacarlo */
+   /* display: flex;               /*inline-block;    /* elijo que sean bloques en una línea */
+   /* justify-content: end;
+   /* flex-direction: column;
+    /*position: relative;*/
+    width: 550px;
+    height: 450px;
+    /*gap: 1px;*/
+   
+}
+
+.tarjeta { 
+   /* display: inline-block;*/
+    position:absolute;
+    color: var(--color-de-letra);
+    background-color: rgb(181, 229, 233);
+    padding: 15px;
+   
+    border-radius: 20px;
+  /*  display: inline-block;  /* lo tratamos como inline (uno al lado del otro) pero siguen siendo block, por tanto darle ancho y alto */
+    text-align: center;
+  
+    overflow: hidden;     /* sólo hay overflow cuando tenemos width y height fijos */
+    width: 400px;     /* sólo si es block o inline-block */  /* para que tenga ancho y alto, si no sin contenido quedan chiquitos, al ser display:auto */
+    height: 1.5em;
+    transition: transform 0.3s ease 0s;   /* aplicamos un transition al transform del hover con 0.3 segundos curva ease y delay 0 seg */
+     /* también podemos aplicarlo a un backgound-color mediante comas, o a todos las propiedades con transition:all */
+
+   }
+
+.tarjeta:hover { 
+    transform:  translateY(-10px);    /* transformación que desplaza un poco con un hover de mouse */
+    
+}
+
+#teclas1 {
+    margin: 40px 40px;
+    box-shadow: 7px 7px 7px rgb(124, 124, 223);
+}
+#teclas2 {
+    box-shadow: 7px 7px 7px rgb(240, 146, 103);
+}
+#teclas3 {
+  
+    box-shadow: 7px 7px 7px rgb(120, 147, 80);
+}
