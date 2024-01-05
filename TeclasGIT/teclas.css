@@ -1,0 +1,74 @@
+
+* { margin: 0px; }
+
+body {     
+    font-size: 26px;
+    font-family: sans-serif;
+    --color-de-letra: rgb(0, 0, 0);  /* creamos una variable. puede ser aquí o en :root para toda la página */
+
+}
+
+body { background: rgb(245, 216, 183);}
+
+.resaltado { border: 4px solid red; }
+
+.titulo { 
+    margin-top: 10px;
+    width: 550px;
+    text-align: center;
+    /*background-color: rgba(10,255,255,0.5);*/
+    }
+
+.contenedor { 
+    color: rgb(127,127,127);
+    background-color: rgba(255,0,255,0.2);       /* rgba(255,0,255,0.2);  /* sólo quiero ver el div. luego sacarlo */
+    width: 550px;
+    height: 400px;
+    display: inline-block;  /* cambiamos el div para que funcionen bien los margin y el centrado de las tarjetas. */
+    margin-left: 40px;
+   
+}
+
+.tarjeta {
+    color: var(--color-de-letra);
+    background-color: rgb(181, 229, 233);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+   /* display: inline-block; NO PUEDO. respeta el margin-top con el contenedor pero pierde el centrado. SOLUCIONADO poniendo esto en el DIV*/
+    margin-top: 40px;    /* si el contenedor es block no funciona. CORREGIDO */
+  
+    overflow: hidden;     /* sólo hay overflow cuando tenemos width y height fijos */
+    width: 400px;    
+    height: 1.5em;
+    transition: transform 0.3s ease 0s;   /* aplicamos un transition al transform del hover con 0.3 segundos curva ease y delay 0 seg */
+     /* también podemos aplicarlo a un backgound-color mediante comas, o a todos las propiedades con transition:all */
+
+   }
+
+.tarjeta:hover { 
+    transform:  translateY(-10px);    /* transformación que desplaza un poco con un hover de mouse */
+    
+}
+
+#teclas1 {
+    box-shadow: 7px 7px 7px rgb(124, 124, 223);
+}
+#teclas2 {
+    box-shadow: 7px 7px 7px rgb(240, 146, 103);
+}
+#teclas3 {
+  
+    box-shadow: 7px 7px 7px rgb(120, 147, 80);
+}
+
+.pie {
+    background-color: rgb(66, 157, 248);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+
+}
